@@ -5,7 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="YAN DISTRIBUTION NEXUS oferă implementare, instalare, configurare și suport remote pentru Nexus ERP, în cloud sau la sediul clientului.">
   <meta name="theme-color" content="#0b1f3a">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://ydnexus.ro/">
   <title>YAN DISTRIBUTION NEXUS | Implementare și suport Nexus ERP</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="YAN DISTRIBUTION NEXUS">
+  <meta property="og:title" content="YAN DISTRIBUTION NEXUS | Implementare și suport Nexus ERP">
+  <meta property="og:description" content="Implementare, instalare, configurare și suport remote pentru Nexus ERP, în cloud sau la sediul clientului.">
+  <meta property="og:url" content="https://ydnexus.ro/">
+  <meta property="og:image" content="https://ydnexus.ro/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YAN DISTRIBUTION NEXUS | Implementare și suport Nexus ERP">
+  <meta name="twitter:description" content="Implementare, instalare, configurare și suport remote pentru Nexus ERP, în cloud sau la sediul clientului.">
+  <meta name="twitter:image" content="https://ydnexus.ro/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "YAN DISTRIBUTION NEXUS SRL",
+    "url": "https://ydnexus.ro/",
+    "email": "nitucalina@gmail.com",
+    "telephone": "+40774689565",
+    "taxID": "RO35727983",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Piatra Neamț",
+      "addressCountry": "RO"
+    },
+    "areaServed": "RO",
+    "description": "Implementare, instalare, configurare și suport remote pentru Nexus ERP, în cloud sau la sediul clientului."
+  }
+  </script>
   <style>
     :root{--navy:#0b1f3a;--blue:#1259d5;--blue2:#0f7ae5;--light:#f4f8ff;--text:#253247;--muted:#68758a;--white:#fff;--line:#dbe5f2;--shadow:0 18px 50px rgba(18,89,213,.12);--radius:22px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.65}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}
@@ -97,6 +128,16 @@
   document.querySelectorAll('.modal-close').forEach(btn=>btn.addEventListener('click',()=>closeModal(btn.closest('.modal'))));
   modals.forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')modals.forEach(m=>m.classList.contains('open')&&closeModal(m))});
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Tab')return;
+    const open=Array.from(modals).find(m=>m.classList.contains('open'));
+    if(!open)return;
+    const focusable=open.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable[focusable.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  });
 
   const banner=document.getElementById('cookieBanner');const settings=document.getElementById('cookieSettings');
   const choice=localStorage.getItem('yan_cookie_choice');

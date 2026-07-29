@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ydnexus.ro/sitemap.xml
