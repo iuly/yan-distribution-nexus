@@ -28,7 +28,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --accept 200,204,206,429 './**/*.html'
+          args: --no-progress --root-dir . --accept 200,204,206,429 './**/*.html'
           fail: true
 
       - name: Start local site
