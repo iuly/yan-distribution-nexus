@@ -71,7 +71,7 @@
       </span>
       <span>YAN DISTRIBUTION NEXUS<small>Consultanță, implementare și suport ERP</small></span>
     </a>
-    <button class="mobile-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
+    <button type="button" class="mobile-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Navigație principală">
       <a href="#servicii">Servicii</a><a href="#infrastructura">Infrastructură</a><a href="#proces">Cum lucrăm</a><a href="#testimoniale">Testimoniale</a><a href="#contact" class="btn btn-primary">Solicită o discuție</a>
     </nav>
@@ -118,16 +118,43 @@
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
   const toggle=document.querySelector('.mobile-toggle');const nav=document.querySelector('.nav-links');
+  function closeMobileNav(returnFocus=false){
+    if(!nav.classList.contains('open'))return;
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    if(returnFocus)toggle.focus();
+  }
   toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false')});
-  document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+  document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>closeMobileNav()));
+  document.addEventListener('click',e=>{
+    if(nav.classList.contains('open')&&!nav.contains(e.target)&&!toggle.contains(e.target))closeMobileNav();
+  });
 
   const modals=document.querySelectorAll('.modal');
-  function openModal(id){const m=document.getElementById(id);if(m){m.classList.add('open');document.body.style.overflow='hidden';m.querySelector('.modal-close').focus()}}
-  function closeModal(m){m.classList.remove('open');document.body.style.overflow=''}
-  document.querySelectorAll('[data-modal]').forEach(el=>el.addEventListener('click',()=>openModal(el.dataset.modal)));
+  let modalTrigger=null;
+  function openModal(id,trigger=document.activeElement){
+    const m=document.getElementById(id);
+    if(!m)return;
+    modalTrigger=trigger;
+    m.classList.add('open');
+    document.body.style.overflow='hidden';
+    m.querySelector('.modal-close').focus();
+  }
+  function closeModal(m){
+    m.classList.remove('open');
+    document.body.style.overflow='';
+    if(modalTrigger&&document.contains(modalTrigger))modalTrigger.focus();
+    modalTrigger=null;
+  }
+  document.querySelectorAll('[data-modal]').forEach(el=>el.addEventListener('click',()=>openModal(el.dataset.modal,el)));
   document.querySelectorAll('.modal-close').forEach(btn=>btn.addEventListener('click',()=>closeModal(btn.closest('.modal'))));
   modals.forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')modals.forEach(m=>m.classList.contains('open')&&closeModal(m))});
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const openModalElement=Array.from(modals).find(m=>m.classList.contains('open'));
+    if(openModalElement)closeModal(openModalElement);
+    else closeMobileNav(true);
+  });
   document.addEventListener('keydown',e=>{
     if(e.key!=='Tab')return;
     const open=Array.from(modals).find(m=>m.classList.contains('open'));
