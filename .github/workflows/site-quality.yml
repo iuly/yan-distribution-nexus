@@ -35,4 +35,4 @@ jobs:
         run: python3 -m http.server 4173 > /tmp/yan-site-server.log 2>&1 &
 
       - name: Check accessibility
-        run: npx --yes pa11y@9 http://127.0.0.1:4173 --standard WCAG2AA --chrome-launch-config .pa11y-chrome.json
+        run: npx --yes pa11y@9 http://127.0.0.1:4173 --standard WCAG2AA --config .pa11y-chrome.json
