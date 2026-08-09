@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="title desc">
+<title id="title">MONDO Echipament Protectie</title>
+<desc id="desc">Logo MONDO Echipament Protectie</desc>
+<rect width="600" height="420" fill="#000"/>
+<g fill="none" stroke-linecap="round" stroke-width="28">
+  <path d="M105 180 A155 155 0 0 1 300 65" stroke="#fff"/>
+  <path d="M300 65 A155 155 0 0 1 495 180" stroke="#f20d16"/>
+</g>
+<text x="300" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="5" fill="#fff">MONDO</text>
+<rect x="105" y="294" width="390" height="4" fill="#6ca7df"/>
+<text x="300" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="3" fill="#fff">ECHIPAMENT PROTECTIE</text>
+</svg>
