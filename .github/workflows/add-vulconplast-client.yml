@@ -19,14 +19,18 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          p=Path('index.html')
-          s=p.read_text(encoding='utf-8')
-          entry=Path('client-vulconplast.tmp').read_text(encoding='utf-8')
-          marker='<li class="client-logo elixir">ELIXIR<small>CONTAB</small></li>\n'
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          entry = Path('client-vulconplast.tmp').read_text(encoding='utf-8').strip()
+          marker = '<ul class="client-strip">'
           if '>VULCONPLAST<small>SRL</small>' not in s:
-              if marker not in s:
-                  raise SystemExit('Expected client marker not found; refusing to modify index.html')
-              s=s.replace(marker, marker+entry, 1)
+              start = s.find(marker)
+              if start == -1:
+                  raise SystemExit('Client list not found; refusing to modify index.html')
+              end = s.find('</ul>', start)
+              if end == -1:
+                  raise SystemExit('Client list closing tag not found; refusing to modify index.html')
+              s = s[:end] + '  ' + entry + '\n' + s[end:]
               p.write_text(s, encoding='utf-8')
       - name: Verify
         run: |
