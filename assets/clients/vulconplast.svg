@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 432" role="img" aria-labelledby="title desc">
-<title id="title">VULCONPLAST</title>
-<desc id="desc">VULCONPLAST logo</desc>
-<image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCAHYAaADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAH/AP/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAQUCf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Cf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Cf//EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEABj8Cf//Z" x="0" y="0" width="1536" height="432" preserveAspectRatio="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1373 325" role="img" aria-labelledby="title desc">
+  <title id="title">VULCONPLAST</title>
+  <desc id="desc">VULCONPLAST logo</desc>
+  <g transform="translate(150 162.5)">
+    <g transform="rotate(-75)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#f57c00"/></g>
+    <g transform="rotate(-45)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#9e9e9e"/></g>
+    <g transform="rotate(-15)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#00a651"/></g>
+    <g transform="rotate(15)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#8cc63f"/></g>
+    <g transform="rotate(45)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#d71920"/></g>
+    <g transform="rotate(75)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#173b9b"/></g>
+    <g transform="rotate(105)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#0879c9"/></g>
+    <g transform="rotate(135)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#18a7d8"/></g>
+    <g transform="rotate(165)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#a5c7e7"/></g>
+    <g transform="rotate(195)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#334fa5"/></g>
+    <g transform="rotate(225)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#e30613"/></g>
+    <g transform="rotate(255)"><path d="M-14-48 L-24-145 L24-145 L14-48 Z" fill="#f57c00"/></g>
+    <polygon points="0,-34 30,-17 30,17 0,34 -30,17 -30,-17" fill="#fff"/>
+  </g>
+  <text x="355" y="190" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="1" fill="#000">VULCONPLAST</text>
 </svg>
