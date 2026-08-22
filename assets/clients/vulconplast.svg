@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1373 325" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325 325" role="img" aria-labelledby="title desc">
   <title id="title">VULCONPLAST</title>
-  <desc id="desc">VULCONPLAST logo with twelve colorful V-shaped segments forming a circular emblem</desc>
-  <g transform="translate(150 162.5)">
+  <desc id="desc">VULCONPLAST colorful circular emblem</desc>
+  <g transform="translate(162.5 162.5)">
     <g transform="rotate(0)"><path d="M-12-32 L-38-145 L-8-145 L0-70 L8-145 L38-145 L12-32 Z" fill="#9e9e9e"/></g>
     <g transform="rotate(30)"><path d="M-12-32 L-38-145 L-8-145 L0-70 L8-145 L38-145 L12-32 Z" fill="#00a651"/></g>
     <g transform="rotate(60)"><path d="M-12-32 L-38-145 L-8-145 L0-70 L8-145 L38-145 L12-32 Z" fill="#8cc63f"/></g>
@@ -16,5 +16,4 @@
     <g transform="rotate(330)"><path d="M-12-32 L-38-145 L-8-145 L0-70 L8-145 L38-145 L12-32 Z" fill="#ff8a00"/></g>
     <circle cx="0" cy="0" r="30" fill="#fff"/>
   </g>
-  <text x="355" y="190" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="1" fill="#000">VULCONPLAST</text>
 </svg>
